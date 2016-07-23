@@ -25,7 +25,7 @@ document.observe('click', function(e, el) {
             '$1_' + parent_ids[i] + '_');
 
           content = content.replace(
-            new RegExp('(\\[' + parent_names[i] + '\\])\\[.+?\\]', 'g'),
+            new RegExp('(\\[' + parent_names[i] + '\\])\\[(?!new_).+?\\]', 'g'),
             '$1[' + parent_ids[i] + ']');
         }
       }

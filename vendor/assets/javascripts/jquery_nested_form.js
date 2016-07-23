@@ -31,7 +31,7 @@
               '$1_' + parentIds[i] + '_');
 
             content = content.replace(
-              new RegExp('(\\[' + parentNames[i] + '\\])\\[.+?\\]', 'g'),
+              new RegExp('(\\[' + parentNames[i] + '\\])\\[(?!new_).+?\\]', 'g'),
               '$1[' + parentIds[i] + ']');
           }
         }
